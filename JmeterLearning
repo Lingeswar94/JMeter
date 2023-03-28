@@ -1,0 +1,21 @@
+JMeter is a Java desktop application with a graphical interface that uses the Swing graphical API. 
+It can, therefore, run on any environment/workstation that accepts a Java virtual machine, for example − Windows, Linux, Mac, etc
+
+
+JMeter can be used to test the performance of both static resources such as JavaScript and HTML, as well as dynamic resources, such as JSP, Servlets, and AJAX.
+
+JMeter can discover the maximum number of concurrent users that your website can handle
+JMeter provides a variety of graphical analyses of performance reports.
+
+Thread Group
+A Thread Group is a set of threads executing the same Scenario. It is the base element for every JMeter test plan
+
+There are multiple thread groups available that can be configured to simulate how the users interact with the application, how the load is maintained, and over what period of time.
+
+The Types of Thread Groups are :
+
+Arrival Thread Group.
+Concurrency Thread Group.
+Freeform Arrivals Thread Group
+Stepping Thread Group
+Ultimate Thread Group
