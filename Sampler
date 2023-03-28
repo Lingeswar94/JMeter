@@ -1,0 +1,14 @@
+Samplers in JMeter are added as a child of Thread Groups. These are used to send different types of requests to the server.
+
+Once, the sampler request is processed by the server, its response is returned to JMeter and the same can be viewed and analyzed in terms of different performance parameters like response time, Hits per second, throughput, etc.
+
+Types of Samplers :
+
+HTTP Request
+JDBC Request
+XML/SOAP RPC Request
+Test Action
+FTP Request
+
+
+
