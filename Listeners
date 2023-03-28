@@ -7,23 +7,69 @@ View Result Tree show results of the user request in basic HTML format
 Table Result shows a summary of test results in table format.
 Log show summary of test results in the text file
 
+Different Type of Listeners available in JMeter are:
 
+View Results Tree
+Summary Report
+Aggregate Report
+Backend Listener
+Aggregate Graph
+Assertion Results
+Comparison Assertion Visualizer
+Generate Summary Results
+Graph Results
+JSR223 Listener
+Mailer Visualizer
+Response Time Graph
+Saves Responses to a file
+Simple Data Writer
+View Results in Table
+Bean Shell Listener
 
+------------------------------------------------------------------
+
+Graph Results
+Graph Results listener is used by the user if they require results in graph form. The graph represents the data of the latest sampler and the response time in the x and y-axis, respectively.
+-------------------------------------------------------------------------------
 Aggregate Graphs:
 
 Aggregate graphs allow us to generate bar graphs easily and let us select graph display settings. The generated graph and table data can be saved explicitly in the form of PNG and CSV.
+Data provided by Listener:
 
-
+#Samples: Total number of Samples.
+Average: Average Time.
+Min: This is the minimum time a sampler has taken to go to the server.
+Max: This is the maximum time request taken to go to the server.
+Error%: Number of error sampler/Total number of Sampler.
+Throughput: Throughput is the per second sample received by the server.
+Received KB/second: This defines how many kilobytes per second received by the Client.
+Sent KB/second: This defines how many Kilobytes per second are sent to the server.
+90% Line: It represents that 10% of the samplers have exceeded time to reach the server.
+95% Line: It represents that 5% of the samplers have exceeded time to reach the server.
+99% Line: It represents that 1% of the samplers have exceeded time to reach the server.
+The above information is very much required and important for a user who is performing a load test as this data analysis helps the user to work on improving the performance of the web application in the test.
+----------------------------------------------------------
 View Results Tree:
 
 View Results Tree displays a tree consists of all the Sampler responses along with their requests. Please Note that View Results Tree SHOULD NOT BE USED during the Load/Stress test as it consumes a lot of resources like memory and CPU. It is recommended to use it for functional testing or debugging purposes.
 
-
+-------------------------------------------------------------------
 View Results In Table:
 
 View Results in a table creates and displays a row for every sample/request result separately. Please Note that View Results In Table SHOULD NOT BE USED during the Load/Stress test as it consumes a lot of resources like memory and CPU. It is recommended to use it with functional testing or debugging purposes.
+Listener shows the below data:
 
-
+Sample #: Total number of Samplers.
+Start Time: It is the time when samples were issued.
+Thread Name: Name of the thread.
+Label: Label as provided.
+Sample Time (ms): Once the request is initiated by the server, the time taken to get the response of the request is the Sample time.
+Status: Status as Pass/Fail symbol.
+Bytes: Received bytes by the client.
+Sent Bytes: Bytes sent to the server.
+Latency: It is the delay in response by the application for the request sent by the user.
+Connect Time (ms): This is the time that a request takes to hit the server.
+---------------------------------------------------------------------------
 Aggregate Report:
 
 The aggregate report shows a separate table row for each differently named sampler request in the test.
