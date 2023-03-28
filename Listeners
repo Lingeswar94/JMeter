@@ -1,0 +1,29 @@
+Listeners
+
+Listeners show the results of the test execution.
+They can show results in a different format, such as a tree, table, graph, or log file.
+Graph result listeners display the server response times on a Graph.
+View Result Tree show results of the user request in basic HTML format
+Table Result shows a summary of test results in table format.
+Log show summary of test results in the text file
+
+
+
+Aggregate Graphs:
+
+Aggregate graphs allow us to generate bar graphs easily and let us select graph display settings. The generated graph and table data can be saved explicitly in the form of PNG and CSV.
+
+
+View Results Tree:
+
+View Results Tree displays a tree consists of all the Sampler responses along with their requests. Please Note that View Results Tree SHOULD NOT BE USED during the Load/Stress test as it consumes a lot of resources like memory and CPU. It is recommended to use it for functional testing or debugging purposes.
+
+
+View Results In Table:
+
+View Results in a table creates and displays a row for every sample/request result separately. Please Note that View Results In Table SHOULD NOT BE USED during the Load/Stress test as it consumes a lot of resources like memory and CPU. It is recommended to use it with functional testing or debugging purposes.
+
+
+Aggregate Report:
+
+The aggregate report shows a separate table row for each differently named sampler request in the test.
