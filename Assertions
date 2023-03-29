@@ -1,0 +1,62 @@
+Assertions
+
+The assertion in JMeter is used to validate the response of the request, that you have sent to the server. The assertion is a process where you verify the expected result with the actual result of the request at run time. If you need to apply assertion on a particular Sampler, then add it as a child of that Sampler.
+
+
+The Cost of JMeter Assertions:
+All assertions come with a cost, in terms of CPU or memory consumption. However, some assertions carry a greater cost than others.
+
+According to the JMeter Performance and Tuning Tips guide, the Response Assertion and the Duration Assertion are typically lower-impact choices.
+Whereas Compare Assertion and other XML-based ones like the XPath Assertion consume more CPU and memory.
+
+Response Assertions:
+
+The most commonly used assertion is the Response Assertion, which checks whether a response text/body/code/message/header contains, matches, or equals a specified pattern.
+The Pattern can be either be:
+
+ a “string” for “Equals” or “Substring” clauses
+a “Perl5-style” Regular Expression for “Contains” or “Matches” clause​
+Response Entities that can be checked include :
+
+Text response: This is for the response that can be displayed in a browser
+Document (text): This is for anything supported by Apache Tika (it assumes the presence of apache-tika.jar in /lib folder of a JMeter installation).
+This can include PDF, Office, audio, and video formats. Be careful, because this can be memory-intensive for high loads.
+URL Sampled: This assertion is used against a requested URL to ensure it matches expectations. For example, you may want to check that the redirect URL does not contain an error somewhere in the path.
+Response Code : This checks to ensure the response code is expected. For 4xx and 5xx response codes, make sure you have checked the Ignore Status box (see below for a full explanation).
+Response Message : This verifies that the response message appears as expected.
+Response Headers : This is used against Response Headers to see if a specific HTTP header is present or absent.
+Ignore Status : JMeter out-of-the-box considers all 4xx and 5xx responses as failures. If your test case is negative and, for example, a 404 error is expected, you will check this box to suppress JMeter’s built-in status code check and substitute it with your own status code assertion.
+
+Size Assertion:
+
+Size Assertion checks the response length to see if it’s equal/not equal/greater/less than the expected size in bytes. It can be applied to:
+
+A full response (body and headers)
+Response headers
+Response body
+Response code
+Response message
+The easiest way to check the response size is through the View Results Tree Listener.
+Here is an example of the sample output: For the Full Response assertion, it should be testing “=” comparison type and 1591 bytes.
+For the Response Body - 1270 bytes
+For the Response Headers - 321 bytes
+
+Duration Assertion:
+
+Duration assertion is used to verify how long a request takes to complete. The Duration measured in milliseconds, and, if any request lasts longer than the value specified, the sample is marked as failed.
+When you get a Duration Assertion failure, the output appears like this.
+
+
+HTML Assertion:
+The HTML Assertion checks that the response HTML syntax is a well-formed HTML/XHTML/XML document. So it is handy if your Web application or site requires zero HTML validation errors.
+Most modern browsers render even invalid HTML pages, but search engine robots or third-party integrations may not be so tolerant.
+The official documentation on HTML Assertion is pretty comprehensive.
+When it comes to Assertion Results Visualization, reports will only display a limited number of warnings and errors.
+
+
+XPath Assertion:
+The XPath Assertion allows an XPath evaluation against a Web server response to ensure the specified entity is present or an element attribute value matches expectations.
+For more information on how to use XPath for correlation, visit XPath Extractor in JMeter.
+The most appropriate use case for XPath Assertion is testing SOAP Web Services XML responses.
+
+
