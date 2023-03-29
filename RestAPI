@@ -1,0 +1,70 @@
+RestAPI Testing in JMeter
+Restful Web Service is a lightweight, maintainable, and scalable service that is built on the REST architecture.
+
+Restful Web Service, expose API from your application in a secure, uniform, stateless manner to the calling client.
+The calling client can perform predefined operations using the Restful service.
+The underlying protocol for REST is HTTP.
+REST stands for Representational State Transfer.
+The Key Elements of a RESTful implementation are as follows:
+Resources :
+
+The first key element is the resource itself.
+Let us assume that a web application on a server has records of several products and the URL of the web application is https://chercher.tech/sample/api-ui.php.
+Now, to access the product record resource via REST, one can issue the command. https://chercher.tech/sample/api/product/read?id=2180
+The above command tells the webserver to provide the details of the product whose product id is 2180(This id might be deleted over a period of time, so visit the UI first and get the id-https://chercher.tech/sample/api-ui.php).
+Request Verbs :
+
+The Request Verbs describe what you want to do with the resource.
+A browser issues a GET verb to instruct the endpoint it wants to get data.
+However, there are many other verbs available, including things like POST, PUT, and DELETE.
+So in the case of the example https://chercher.tech/sample/api/product/read?id=2180 The web browser is issuing a GET Verb because it wants to get the details of the employee record.
+Request Headers :
+
+These are additional instructions sent with the Request. These might define the type of response required or the authorization details.
+Request Body :
+
+Data is sent with the Request.
+Data is normally sent in the Request when a POST request is made to the REST API.
+In a POST call, the client tells the web service that it wants to add a resource to the server.
+So, the request body would have the details of the resource which is required to be added to the server.
+Response Body :
+
+This is the main body of the response.
+So in our example, if we were to query the web server via the Request https://chercher.tech/sample/api/product/read?id=2180 the server returns a JSON body with all the details of the Product in the Response Body.
+Response Status codes :
+
+These codes are the general codes that are returned along with the response from the webserver.
+An example is the code 200 which is typically returned if there is no error when returning a response to the client.
+When the client makes any request to this web service, it can specify any of the normal HTTP verbs of GET, POST, DELETE and PUT. Below is what would happen If the respective verbs were sent by the client.
+
+POST : This would be used to create a new employee using the RESTful web service.
+GET : This would be used to get a list of all employees using the RESTful web service.
+PUT : This would be used to update all employees using the RESTful web service.
+DELETE : This would be used to delete all employees using the RESTful web service.
+Let's take a look from a perspective of just a single record. Let's say there was an employee record with the employee number of 1.
+
+The following actions would have their respective meanings.
+
+POST: This would not be applicable since we are fetching data of employee 1 which is already created.
+GET : This would be used to get the details of the employee with an employee no as 1 using the RESTful web service.
+PUT : This would be used to update the details of the employee with an employee no as 1 using the RESTful web service.
+DELETE: This is used to delete the details of the employee with an employee no as 1.
+Why Restful:
+Restful mostly came into popularity due to the following reasons :
+
+Heterogeneous languages and environments :
+
+This is one of the fundamental reasons which is the same as we have seen for SOAP as well.
+It enables web applications that are built on various programming languages to communicate with each other.
+With the help of Restful services, these web applications can reside in different environments, some could be on Windows, and others could be on Linux.
+The event of Devices :
+
+Nowadays, everything needs to work on Mobile devices, whether it be the mobile device, the notebooks, or even car systems.
+Can you imagine the amount of effort to try and code applications on these devices to talk with normal web applications? Again Restful APIs can make this job simpler because as mentioned in point no 1, you really don't need to know what is the underlying layer for the device.
+Finally in the event of the Cloud :
+
+Everything is moving to the cloud.
+Applications are slowly moving to cloud-based systems such as in Azure or Amazon.
+Azure and Amazon provide a lot of API's based on Restful architecture.
+Hence, applications now need to be developed in such a way that they are made compatible with the Cloud.
+So since all Cloud-based architectures work on the REST principle, it makes more sense for web services to be programmed on the REST-based architecture to make the best use of Cloud-based services.
