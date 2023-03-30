@@ -1,0 +1,12 @@
+Blazemeter
+
+It is important to carefully choose your load testing tools. JMeter is the most popular open-source load and software performance testing tool.
+
+This blog post will offer a basic JMeter tutorial, which will be simple to follow so teams can get started right away. We will create a few basic JMeter scripts and go over different JMeter features like assertions and dynamic data. In the end, we will briefly talk about analyzing your results in reports
+
+
+Congratulations! You can now create your own basic JMeter scripts. But as you might have understood, if you need to create a long user flow, it could take you a long time.
+
+Therefore, a better way to create scripts is by recording them. To record, you can either use the JMeter recorder, or the BlazeMeter Chrome Extension. The BlazeMeter extension, free to use from the Chrome store, is more user friendly than the JMeter one, which requires you to set a proxy to redirect the traffic.
+
+Through your Chrome, start recording and simulate the user scenario you want to test by clicking away. When you’re done, stop the recording, and edit as necessary.
