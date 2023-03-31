@@ -1,0 +1,3 @@
+
+What is PerfMon in JMeter?
+PerfMon Metrics Collector has special "Metric Parameter" column, where user can specify metric subtype to collect, specify which process should be monitored (which filesystem, network interface). Metric parameter string may have several parameters inside it.
